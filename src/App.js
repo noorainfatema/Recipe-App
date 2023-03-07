@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 
-function App() {
-  return (
+const App = () => {
+
+  const APP_ID = "d978bffb";
+  const APP_KEY = "fadc99c96e29940fc1e73f57890162b1";
+
+  useEffect(() =>{
+    console.log('Effect has been run');
+  });
+
+  const [counter, setCounter] = useState(0);
+
+  return(
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <form className="search-form">
+        <input className="search-bar" type="text"/>
+        <button onClick={() => setCounter(counter + 1)} className="search-button" type="submit">{Counter}}</button>
+      </form>
     </div>
   );
-}
+};
 
 export default App;
